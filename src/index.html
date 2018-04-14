@@ -9,7 +9,19 @@
   <div id="content">
     <h1>Lipogrammatic URL Shrinking</h1>
     <form id="f">
-      <input class="t" type="text" placeholder="Put a long URL in this box"><button class="t">Shrink</button>
+      <p><input class="t" type="text" id="url_long" placeholder="Put a long URL in this box"><button id="shrink" type="button" class="t">Shrink</button></p>
+      <p class="invisible" id="error"></p>
+    </form>
+    <form id="g" class="invisible">
+      <p>
+        Shrunk your URL!<br />
+        <span id="url_long_disp"></span>
+      </p>
+      <p>
+        <label for="url_short">Your URL, now not as long as it was:</label><br />
+        <input class="t" type="text" id="url_short" readonly="readonly">
+      </p>
+      <p><button id="startagain" type="button" class="t">Start again</button></p>
     </form>
   </div>
 </body>

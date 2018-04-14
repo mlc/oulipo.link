@@ -1,5 +1,3 @@
-import 'core-js/es6/promise';
-
 const documentready = () =>
   new Promise(resolve => {
     if (

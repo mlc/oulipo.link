@@ -1,5 +1,3 @@
-import 'core-js/es6/promise';
-
 const fillFetch = () =>
   new Promise(resolve => {
     if ('fetch' in window) {
