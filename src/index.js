@@ -1,4 +1,3 @@
-import 'promise-polyfill/src/polyfill';
 import ready from 'document-ready-promise';
 
 import { hide, show } from './classlist';
