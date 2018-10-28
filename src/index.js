@@ -1,7 +1,7 @@
 import 'promise-polyfill/src/polyfill';
+import ready from 'document-ready-promise';
 
 import { hide, show } from './classlist';
-import documentready from './documentready';
 import polyfills from './polyfills';
 import './style.css';
 
@@ -69,6 +69,4 @@ const start = () => {
   urlLong.focus();
 };
 
-polyfills()
-  .then(documentready)
-  .then(start);
+Promise.all([polyfills(), ready()]).then(start);
