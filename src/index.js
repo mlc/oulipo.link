@@ -65,6 +65,17 @@ const start = () => {
     urlLong.focus();
   });
 
+  const copyButton = document.getElementById('copy');
+  if (navigator && navigator.clipboard && 'writeText' in navigator.clipboard) {
+    copyButton.addEventListener('click', () => {
+      // we're supposed to check permissions here but browsers don't actually
+      // make us do so
+      navigator.clipboard.writeText(urlShort.value).catch(console.error);
+    });
+  } else {
+    copyButton.parent.removeChild(copyButton);
+  }
+
   urlLong.focus();
 };
 
