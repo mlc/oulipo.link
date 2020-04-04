@@ -2,7 +2,9 @@
 
 set -ex
 
+yarn check-types
 yarn prod
+
 for i in dist/*.css; do
   aws s3 cp $i s3://prod.oulipo.link/u/ --content-type 'text/css' --cache-control 'public, max-age=31556952, immutable'
 done

@@ -1,5 +1,5 @@
 const fillFetch = () =>
-  new Promise(resolve => {
+  new Promise((resolve) => {
     if ('fetch' in window) {
       return resolve();
     }
