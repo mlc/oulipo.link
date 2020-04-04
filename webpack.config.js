@@ -20,6 +20,9 @@ module.exports = {
     filename: '[name].[chunkhash].js',
     path: path.resolve(__dirname, 'dist'),
   },
+  resolve: {
+    extensions: ['.js', '.ts', '.json'],
+  },
   module: {
     rules: [
       {
@@ -31,7 +34,7 @@ module.exports = {
         loader: 'base64-inline-loader',
       },
       {
-        test: /\.js$/,
+        test: /\.(js|ts)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
