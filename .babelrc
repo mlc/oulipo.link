@@ -1,7 +1,10 @@
 {
   "plugins": [["@babel/plugin-transform-runtime"]],
   "presets": [
-    ["@babel/preset-env", { "useBuiltIns": "usage", "targets": "> 0.5%" }],
-    "@babel/typescript"
+    [
+      "@babel/preset-env",
+      { "corejs": 3, "useBuiltIns": "usage", "targets": "> 0.5%" }
+    ],
+    ["@babel/typescript"]
   ]
 }

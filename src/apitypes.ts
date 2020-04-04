@@ -1,13 +1,13 @@
-interface Success {
+export interface ApiSuccess {
   url_long: string;
   url_short: string;
 }
 
-interface Failure {
+export interface ApiFailure {
   error: string;
 }
 
-export type ApiResponse = Success | Failure;
+export type ApiResponse = ApiSuccess | ApiFailure;
 
 export interface ApiRequest {
   url_long: string;

@@ -1,20 +1,20 @@
-import { ApiRequest, ApiResponse } from './apitypes';
+import { ApiRequest, ApiResponse, ApiSuccess } from './apitypes';
 import { hide, show } from './classlist';
 import ready from './document-ready-promise';
+import { getElement } from './dom';
 import polyfills from './polyfills';
 
 import './style.css';
 
 const start = () => {
-  const urlLong = document.getElementById('url_long') as HTMLInputElement;
-  const urlShort = document.getElementById('url_short') as HTMLInputElement;
+  const urlLong = getElement('url_long', HTMLInputElement);
+  const urlShort = getElement('url_short', HTMLInputElement);
 
-  const showSuccess = ([longUrl, shortUrl]: string[]) => {
+  const showSuccess = (resp: ApiSuccess) => {
     hide('f');
     show('g');
-    const disp = document.getElementById('url_long_disp') as HTMLSpanElement;
-    disp.innerText = longUrl;
-    urlShort.value = shortUrl;
+    getElement('url_long_disp', HTMLSpanElement).innerText = resp.url_long;
+    urlShort.value = resp.url_short;
     urlShort.focus();
     urlShort.select();
   };
@@ -22,8 +22,7 @@ const start = () => {
   const showFailure = (error: Error) => {
     show('error');
     const message = (error && error.message) || 'It didn’t work.';
-    const errorP = document.getElementById('error') as HTMLParagraphElement;
-    errorP.innerText = `Oh no! ${message}`;
+    getElement('error', HTMLParagraphElement).innerText = `Oh no! ${message}`;
   };
 
   const submit = (evt: Event) => {
@@ -52,32 +51,22 @@ const start = () => {
       .then((json: ApiResponse) =>
         'error' in json
           ? Promise.reject(new Error(json.error))
-          : [json.url_long, json.url_short]
+          : showSuccess(json)
       )
-      .then(showSuccess)
       .catch(showFailure);
   };
 
-  (document.getElementById('f') as HTMLFormElement).addEventListener(
-    'submit',
-    submit
-  );
-  (document.getElementById('shrink') as HTMLButtonElement).addEventListener(
-    'click',
-    submit
-  );
-  (document.getElementById('startagain') as HTMLButtonElement).addEventListener(
-    'click',
-    () => {
-      show('f');
-      hide('g');
-      hide('error');
-      urlLong.value = '';
-      urlLong.focus();
-    }
-  );
+  document.getElementById('f')?.addEventListener('submit', submit);
+  document.getElementById('shrink')?.addEventListener('click', submit);
+  document.getElementById('startagain')?.addEventListener('click', () => {
+    show('f');
+    hide('g');
+    hide('error');
+    urlLong.value = '';
+    urlLong.focus();
+  });
 
-  const copyButton = document.getElementById('copy') as HTMLButtonElement;
+  const copyButton = getElement('copy', HTMLButtonElement);
   if (navigator && navigator.clipboard && 'writeText' in navigator.clipboard) {
     copyButton.addEventListener('click', () => {
       // we're supposed to check permissions here but browsers don't actually
