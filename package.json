@@ -38,5 +38,8 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
-  }
+  },
+  "browserslist": [
+    "cover 95% in US"
+  ]
 }

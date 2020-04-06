@@ -67,7 +67,7 @@ const start = () => {
   });
 
   const copyButton = getElement('copy', HTMLButtonElement);
-  if (navigator && navigator.clipboard && 'writeText' in navigator.clipboard) {
+  if (typeof navigator.clipboard?.writeText === 'function') {
     copyButton.addEventListener('click', () => {
       // we're supposed to check permissions here but browsers don't actually
       // make us do so
