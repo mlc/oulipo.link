@@ -1,7 +1,6 @@
 import { ApiRequest, ApiResponse, ApiSuccess } from './apitypes';
-import { hide, show } from './classlist';
 import ready from './document-ready-promise';
-import { getElement } from './dom';
+import { getElement, hide, show } from './dom';
 import polyfills from './polyfills';
 
 import './style.css';
@@ -21,7 +20,7 @@ const start = () => {
 
   const showFailure = (error: Error) => {
     show('error');
-    const message = (error && error.message) || 'It didn’t work.';
+    const message = error?.message ?? 'It didn’t work.';
     getElement('error', HTMLParagraphElement).innerText = `Oh no! ${message}`;
   };
 
