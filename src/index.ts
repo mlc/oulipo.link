@@ -2,14 +2,18 @@ import { ApiRequest, ApiResponse, ApiSuccess } from './apitypes';
 import ready from './document-ready-promise';
 import { getElement, hide, show } from './dom';
 import polyfills from './polyfills';
+import { setup as saSetup } from './sa';
 
 import './style.css';
+
+saSetup();
 
 const start = () => {
   const urlLong = getElement('url_long', HTMLInputElement);
   const urlShort = getElement('url_short', HTMLInputElement);
 
   const showSuccess = (resp: ApiSuccess) => {
+    window.saEvent('shrink_success');
     hide('f');
     show('g');
     getElement('url_long_disp', HTMLSpanElement).innerText = resp.url_long;
@@ -19,6 +23,7 @@ const start = () => {
   };
 
   const showFailure = (error: Error) => {
+    window.saEvent('shrink_failure');
     show('error');
     const message = error?.message ?? 'It didn’t work.';
     getElement('error', HTMLParagraphElement).innerText = `Oh no! ${message}`;

@@ -1,29 +1,51 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Lipogrammatic URL Shrinking</title>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:500|Space+Mono" rel="stylesheet">
-</head>
-<body>
-  <div id="content">
-    <h1>Lipogrammatic URL Shrinking</h1>
-    <form id="f">
-      <p><input class="t" type="text" id="url_long" placeholder="Put a long URL in this box"><button id="shrink" type="button" class="t">Shrink</button></p>
-      <p class="invisible" id="error"></p>
-    </form>
-    <form id="g" class="invisible">
-      <p>
-        Shrunk your URL!<br />
-        <span id="url_long_disp"></span>
-      </p>
-      <p>
-        <label for="url_short">Your URL, now not as long as it was:</label><br />
-        <input class="t" type="text" id="url_short" readonly="readonly">
-        <button id="copy" type="button" class="t">Copy</button>
-      </p>
-      <p><button id="startagain" type="button" class="t">Start again</button></p>
-    </form>
-  </div>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Lipogrammatic URL Shrinking</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:500|Space+Mono"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="content">
+      <h1>Lipogrammatic URL Shrinking</h1>
+      <form id="f">
+        <p>
+          <input
+            class="t"
+            type="text"
+            id="url_long"
+            placeholder="Put a long URL in this box"
+          /><button id="shrink" type="button" class="t">Shrink</button>
+        </p>
+        <p class="invisible" id="error"></p>
+      </form>
+      <form id="g" class="invisible">
+        <p>
+          Shrunk your URL!<br />
+          <span id="url_long_disp"></span>
+        </p>
+        <p>
+          <label for="url_short">Your URL, now not as long as it was:</label
+          ><br />
+          <input class="t" type="text" id="url_short" readonly="readonly" />
+          <button id="copy" type="button" class="t">Copy</button>
+        </p>
+        <p>
+          <button id="startagain" type="button" class="t">Start again</button>
+        </p>
+      </form>
+    </div>
+    <script
+      async
+      defer
+      data-sa-global="saEvent"
+      src="https://a.mlcastle.net/latest.js"
+    ></script>
+    <noscript
+      ><img src="https://a.mlcastle.net/noscript.gif" alt=""
+    /></noscript>
+  </body>
 </html>
