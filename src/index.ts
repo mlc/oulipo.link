@@ -42,11 +42,12 @@ const start = () => {
       cdn_prefix: 'oulipo.link',
     };
 
-    fetch('/create', {
+    fetch('https://api.oulipo.link/create', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
+      mode: 'cors',
       body: JSON.stringify(body),
     })
       .then((resp) =>
