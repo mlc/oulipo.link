@@ -1,4 +1,7 @@
-const ready = <T>(chainVal?: T): Promise<T> => {
+function ready(): Promise<void>;
+function ready<T>(chainVal: T): Promise<T>;
+
+function ready<T>(chainVal?: T) {
   const d = document;
   const w = window;
   const loaded = /^loaded|^i|^c/.test(d.readyState);
@@ -17,6 +20,6 @@ const ready = <T>(chainVal?: T): Promise<T> => {
       w.addEventListener('load', onReady);
     }
   });
-};
+}
 
 export default ready;
