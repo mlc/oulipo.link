@@ -30,9 +30,7 @@
     "webpack-cli": "^4.5.0"
   },
   "dependencies": {
-    "@babel/runtime": "^7.9.2",
-    "core-js": "^3.6.4",
-    "whatwg-fetch": "^2.0.4"
+    "@babel/runtime": "^7.9.2"
   },
   "husky": {
     "hooks": {

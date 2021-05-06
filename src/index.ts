@@ -1,7 +1,6 @@
 import { ApiRequest, ApiResponse, ApiSuccess } from './apitypes';
 import ready from './document-ready-promise';
 import { getElement, hide, show } from './dom';
-import polyfills from './polyfills';
 import { setup as saSetup } from './sa';
 
 import './style.css';
@@ -85,4 +84,4 @@ const start = () => {
   urlLong.focus();
 };
 
-Promise.all([polyfills(), ready()]).then(start);
+ready().then(start);
