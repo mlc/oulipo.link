@@ -4,12 +4,12 @@
     "target": "ESNext",
     "moduleResolution": "Node",
     "allowJs": true,
-    "noEmit": true,
     "strict": true,
     "isolatedModules": true,
     "esModuleInterop": true,
+    "sourceMap": true,
     "lib": ["dom", "ES2018"]
   },
-  "include": ["src"],
+  "include": ["src", "webpack.config.ts"],
   "exclude": ["node_modules"]
 }

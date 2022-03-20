@@ -38,7 +38,7 @@ const config: WebpackConfig = {
         test: /\.(js|ts)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: 'ts-loader',
         },
       },
       {
@@ -50,6 +50,7 @@ const config: WebpackConfig = {
       },
     ],
   },
+  devtool: 'hidden-source-map',
 };
 
 export default config;
