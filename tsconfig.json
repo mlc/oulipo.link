@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "target": "ESNext",
+    "target": "ES2018",
     "moduleResolution": "Node",
     "allowJs": true,
     "strict": true,
