@@ -44,6 +44,7 @@ input.t {
   font-family: 'Space Mono';
   font-weight: 400;
   font-style: normal;
+  font-variant-ligatures: none;
   background-color: #f2e9e4;
   color: #22223b;
   margin-right: 16px;
@@ -73,6 +74,7 @@ p {
   font-family: 'Space Mono';
   font-weight: 400;
   font-style: normal;
+  font-variant-ligatures: none;
   font-size: 14pt;
   line-height: 18pt;
 }
