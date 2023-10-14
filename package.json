@@ -35,7 +35,7 @@
     "webpack-cli": "5.1.4"
   },
   "dependencies": {
-    "tslib": "2.6.1"
+    "tslib": "2.6.2"
   },
   "browserslist": [
     "cover 95% in US"
