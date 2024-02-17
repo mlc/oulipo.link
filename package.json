@@ -44,5 +44,6 @@
     "*": [
       "prettier --write --ignore-unknown"
     ]
-  }
+  },
+  "packageManager": "yarn@4.1.0"
 }
