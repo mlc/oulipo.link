@@ -203,12 +203,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:18.19.17":
-  version: 18.19.17
-  resolution: "@types/node@npm:18.19.17"
+"@types/node@npm:*, @types/node@npm:20.11.19":
+  version: 20.11.19
+  resolution: "@types/node@npm:20.11.19"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10c0/ac2e4910d5f2bb92cb2623f6d4d4d665a39cf1d425993347e6c3756c70a4def21a47241b86f49e1e4f441529753527bbd9be5f08f29fdac38c64035a26b847c7
+  checksum: 10c0/f451ef0a1d78f29c57bad7b77e49ebec945f2a6d0d7a89851d7e185ee9fe7ad94d651c0dfbcb7858c9fa791310c8b40a881e2260f56bd3c1b7e7ae92723373ae
   languageName: node
   linkType: hard
 
@@ -2112,7 +2112,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "oulipo.link@workspace:."
   dependencies:
-    "@types/node": "npm:18.19.17"
+    "@types/node": "npm:20.11.19"
     "@types/webpack": "npm:5.28.5"
     "@types/webpack-env": "npm:1.18.4"
     autoprefixer: "npm:10.4.17"
