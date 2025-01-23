@@ -203,12 +203,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:20.17.15":
-  version: 20.17.15
-  resolution: "@types/node@npm:20.17.15"
+"@types/node@npm:*, @types/node@npm:22.10.8":
+  version: 22.10.8
+  resolution: "@types/node@npm:22.10.8"
   dependencies:
-    undici-types: "npm:~6.19.2"
-  checksum: 10c0/2fd51772cacd12f5442bfad91cb1af3a8744dff29ca1852f9eef7ed2df6356a4f67a0fd8185188535ba9b0b0ffbe444d1cf240afa179f716838e82f3568d2185
+    undici-types: "npm:~6.20.0"
+  checksum: 10c0/bad2281e7d6e7bfea9d48283e6ec1dd726d28e4e43571006b94b6da0249df9cd3d3f41aeb64354ebb95b8ca55f664dedb025b9810248b4d21e01459cef68cb34
   languageName: node
   linkType: hard
 
@@ -2104,7 +2104,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "oulipo.link@workspace:."
   dependencies:
-    "@types/node": "npm:20.17.15"
+    "@types/node": "npm:22.10.8"
     "@types/webpack": "npm:5.28.5"
     "@types/webpack-env": "npm:1.18.5"
     autoprefixer: "npm:10.4.20"
@@ -3253,10 +3253,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici-types@npm:~6.19.2":
-  version: 6.19.8
-  resolution: "undici-types@npm:6.19.8"
-  checksum: 10c0/078afa5990fba110f6824823ace86073b4638f1d5112ee26e790155f481f2a868cc3e0615505b6f4282bdf74a3d8caad715fd809e870c2bb0704e3ea6082f344
+"undici-types@npm:~6.20.0":
+  version: 6.20.0
+  resolution: "undici-types@npm:6.20.0"
+  checksum: 10c0/68e659a98898d6a836a9a59e6adf14a5d799707f5ea629433e025ac90d239f75e408e2e5ff086afc3cace26f8b26ee52155293564593fbb4a2f666af57fc59bf
   languageName: node
   linkType: hard
 
