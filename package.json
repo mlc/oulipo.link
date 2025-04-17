@@ -12,7 +12,7 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@types/node": "20.17.30",
+    "@types/node": "22.14.1",
     "@types/webpack": "5.28.5",
     "@types/webpack-env": "1.18.8",
     "autoprefixer": "10.4.21",
