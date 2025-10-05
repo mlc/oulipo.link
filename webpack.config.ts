@@ -32,7 +32,7 @@ const config: WebpackConfig = {
       },
       {
         test: /\.(woff2?|ttf|eot)$/,
-        loader: 'base64-inline-loader',
+        type: 'asset',
       },
       {
         test: /\.(js|ts)$/,
