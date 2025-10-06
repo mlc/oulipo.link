@@ -963,7 +963,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"create-error@npm:^0.3.1":
+"create-error@npm:0.3.1":
   version: 0.3.1
   resolution: "create-error@npm:0.3.1"
   checksum: 10c0/3243ce8351939d227c2b9137b39cac9b39e32c6e8ff5813870f0ca8f4a8b13656c5247f6a1803b94d4f5c2a1490461f56de5f4c84e3560b3f2b6087fb1be1484
@@ -2111,7 +2111,7 @@ __metadata:
     "@types/webpack-env": "npm:1.18.8"
     autoprefixer: "npm:10.4.21"
     clean-webpack-plugin: "npm:4.0.0"
-    create-error: "npm:^0.3.1"
+    create-error: "npm:0.3.1"
     css-loader: "npm:7.1.2"
     cssnano: "npm:7.1.1"
     html-loader: "npm:5.1.0"
