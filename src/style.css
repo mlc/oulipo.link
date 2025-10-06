@@ -89,6 +89,12 @@ button.t {
   padding-right: 16px;
   background-color: var(--ultra-violet);
   color: var(--isabelline);
+  cursor: pointer;
+}
+
+button.t:disabled {
+  opacity: 0.6;
+  cursor: inherit;
 }
 
 p {

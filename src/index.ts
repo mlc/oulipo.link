@@ -1,7 +1,7 @@
-import { ApiRequest, ApiResponse, ApiSuccess } from './apitypes';
 import ready from './document-ready-promise';
 import { getElement, hide, show } from './dom';
 import { setup as saSetup } from './sa';
+import { ApiSuccess, shrink } from './api';
 
 import './style.css';
 
@@ -28,7 +28,9 @@ const start = () => {
     getElement('error', HTMLParagraphElement).innerText = `Oh no! ${message}`;
   };
 
-  const submit = (evt: Event) => {
+  const shrinkButton = getElement('shrink', HTMLButtonElement);
+
+  const submit = async (evt: Event) => {
     evt.preventDefault();
 
     const url = urlLong.value;
@@ -36,32 +38,19 @@ const start = () => {
       return;
     }
 
-    const body: ApiRequest = {
-      url_long: url,
-      cdn_prefix: 'oulipo.link',
-    };
-
-    fetch('https://api.oulipo.link/create', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      mode: 'cors',
-      body: JSON.stringify(body),
-    })
-      .then((resp) =>
-        resp.ok ? resp.json() : Promise.reject(new Error(resp.statusText))
-      )
-      .then((json: ApiResponse) =>
-        'error' in json
-          ? Promise.reject(new Error(json.error))
-          : showSuccess(json)
-      )
-      .catch(showFailure);
+    try {
+      shrinkButton.disabled = true;
+      const result = await shrink(url);
+      showSuccess(result);
+    } catch (e) {
+      showFailure(e as Error);
+    } finally {
+      shrinkButton.disabled = false;
+    }
   };
 
   document.getElementById('f')?.addEventListener('submit', submit);
-  document.getElementById('shrink')?.addEventListener('click', submit);
+  shrinkButton.addEventListener('click', submit);
   document.getElementById('startagain')?.addEventListener('click', () => {
     show('f');
     hide('g');
