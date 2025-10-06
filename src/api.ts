@@ -1,3 +1,5 @@
+import createError from 'create-error';
+
 export interface ApiSuccess {
   url_long: string;
   url_short: string;
@@ -14,6 +16,8 @@ export interface ApiRequest {
   cdn_prefix: 'oulipo.link';
 }
 
+const ApiError = createError('ApiError');
+
 export const shrink = async (url: string): Promise<ApiSuccess> => {
   const body: ApiRequest = {
     url_long: url,
@@ -29,11 +33,11 @@ export const shrink = async (url: string): Promise<ApiSuccess> => {
     body: JSON.stringify(body),
   });
   if (!resp.ok) {
-    throw new Error(resp.statusText);
+    throw new ApiError(resp.statusText);
   }
   const json: ApiResponse = await resp.json();
   if ('error' in json) {
-    throw new Error(json.error);
+    throw new ApiError(json.error);
   }
   return json;
 };

@@ -3,6 +3,7 @@ import type { Configuration as WebpackConfig } from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import TerserPlugin from 'terser-webpack-plugin';
 
 const config: WebpackConfig = {
   plugins: [
@@ -38,7 +39,12 @@ const config: WebpackConfig = {
         test: /\.(js|ts)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'ts-loader',
+          loader: 'swc-loader',
+          options: {
+            env: {
+              targets: 'defaults',
+            },
+          },
         },
       },
       {
@@ -48,6 +54,15 @@ const config: WebpackConfig = {
           options: { minimize: true },
         },
       },
+    ],
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        minify: TerserPlugin.swcMinify,
+        terserOptions: {},
+      }),
     ],
   },
   devtool: 'hidden-source-map',
