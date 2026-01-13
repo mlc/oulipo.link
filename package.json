@@ -14,7 +14,7 @@
   "devDependencies": {
     "@swc/core": "1.13.5",
     "@types/create-error": "0.3.33",
-    "@types/node": "22.18.8",
+    "@types/node": "24.10.8",
     "@types/webpack": "5.28.5",
     "@types/webpack-env": "1.18.8",
     "autoprefixer": "10.4.21",
