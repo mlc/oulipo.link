@@ -14,7 +14,7 @@
   "devDependencies": {
     "@swc/core": "1.15.11",
     "@types/create-error": "0.3.33",
-    "@types/node": "24.10.9",
+    "@types/node": "24.10.13",
     "@types/webpack": "5.28.5",
     "@types/webpack-env": "1.18.8",
     "autoprefixer": "10.4.24",
@@ -34,7 +34,7 @@
     "terser-webpack-plugin": "5.3.16",
     "ts-node": "10.9.2",
     "typescript": "5.9.3",
-    "webpack": "5.104.1",
+    "webpack": "5.105.2",
     "webpack-cli": "6.0.1"
   },
   "dependencies": {
