@@ -1,8 +1,7 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "target": "ES2018",
-    "moduleResolution": "Node",
+    "moduleResolution": "bundler",
     "allowJs": true,
     "strict": true,
     "isolatedModules": true,
