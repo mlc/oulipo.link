@@ -2044,7 +2044,7 @@ __metadata:
     lint-staged: "npm:17.0.4"
     mini-css-extract-plugin: "npm:2.10.2"
     postcss: "npm:8.5.14"
-    postcss-import: "npm:16.1.1"
+    postcss-import: "npm:17.0.1"
     postcss-loader: "npm:8.2.1"
     prettier: "npm:3.8.3"
     swc-loader: "npm:0.2.7"
@@ -2303,16 +2303,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-import@npm:16.1.1":
-  version: 16.1.1
-  resolution: "postcss-import@npm:16.1.1"
+"postcss-import@npm:17.0.1":
+  version: 17.0.1
+  resolution: "postcss-import@npm:17.0.1"
   dependencies:
     postcss-value-parser: "npm:^4.0.0"
     read-cache: "npm:^1.0.0"
     resolve: "npm:^1.1.7"
   peerDependencies:
     postcss: ^8.0.0
-  checksum: 10c0/b91245971564891110cb407c7459bd470893ccbdd3328fdd384ef2be4d0e5f304e5834acbb8b537ad562c001db34bee1c29b55994bead5ab5a53b1edc2a687b9
+  checksum: 10c0/9552088e232d2daa6322c9fc9d885bd13d084eaafc96c91636eacbc32d32bf1631123cb8ec0f32a8a0b206d3f52a02986395ecc32287acbb3dd52f6c75472809
   languageName: node
   linkType: hard
 
